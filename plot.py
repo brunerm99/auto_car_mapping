@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import re
 import csv
+print("done importign")
 
 coord_queue = []
 coords = {}
