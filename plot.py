@@ -28,6 +28,9 @@ def plot(fname):
 	range_pd = range_pd.interpolate(method='linear', limit_direction='backward')
 	range_pd = range_pd.fillna(0)
 	range_arr = range_pd.to_numpy().reshape(range_arr.size)
+	print(np.where(range_arr > 800))
+	range_arr[np.where(range_arr > 800)] = range_arr[(np.where(range_arr > 800)[0] - 1)]
+	print(np.where(range_arr > 800))
 
 	ax = plt.subplot(111, projection='polar')
 	ax.plot(theta, range_arr)
