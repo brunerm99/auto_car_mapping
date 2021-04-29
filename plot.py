@@ -1,10 +1,17 @@
 import random
+print('random')
 import matplotlib.pyplot as plt
+print('plt')
 import math
+print('math')
 import numpy as np
+print('np')
 import pandas as pd
+print('pd')
 import re
+print('re')
 import csv
+print('csv')
 print("done importign")
 
 coord_queue = []
@@ -38,4 +45,12 @@ def plot(fname):
 	ax.set_rmax(30)
 	ax.set
 	plt.savefig(fname + '.png')
-	
+
+def main():
+    for i in range(3, 8):
+        filename = 'output' + str(i)
+        print(filename)
+        plot(filename)
+
+if __name__ == '__main__':
+    main()
